@@ -15,4 +15,4 @@ cmake -S . -B build
 cmake --install build --prefix <prefix>
 ```
 
-A C++20 compiler, CMake, and Git are required.
+CMake and Git are required.
