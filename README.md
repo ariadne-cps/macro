@@ -4,13 +4,6 @@
 
 Ariadne Macro is a header-only support module for Ariadne projects.
 
-It owns the two public headers formerly provided directly by Ariadne Utility:
-
-- `macro/general.hpp`
-- `macro/testing.hpp`
-
-Downstream projects include these headers as `macro/general.hpp` and `macro/testing.hpp`.
-
 ## Configure and install
 
 Clone the repository together with its Git submodules:
@@ -22,4 +15,4 @@ cmake -S . -B build
 cmake --install build --prefix <prefix>
 ```
 
-There are no compiled sources, tests, or coverage targets in this repository.
+A C++20 compiler, CMake, and Git are required.
