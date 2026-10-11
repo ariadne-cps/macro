@@ -1,5 +1,5 @@
 /***************************************************************************
- *            test.hpp
+ *            testing.hpp
  *
  *  Copyright  2023  Luca Geretti
  ****************************************************************************/
@@ -21,12 +21,12 @@
  *  along with Ariadne Macro.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-/*!\file test.hpp
+/*!\file testing.hpp
  * \brief Macros for test suite.
  */
 
-#ifndef ARIADNE_MACRO_TEST_HPP
-#define ARIADNE_MACRO_TEST_HPP
+#ifndef ARIADNE_MACRO_TESTING_HPP
+#define ARIADNE_MACRO_TESTING_HPP
 
 #include <cstdlib>
 #include <cstring>
@@ -657,5 +657,5 @@ int test_case_counter = 0;
     } \
 
 
-#endif // ARIADNE_MACRO_TEST_HPP
+#endif // ARIADNE_MACRO_TESTING_HPP
 
