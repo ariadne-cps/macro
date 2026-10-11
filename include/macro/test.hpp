@@ -5,35 +5,35 @@
  ****************************************************************************/
 
 /*
- *  This file is part of Ariadne Utility.
+ *  This file is part of Ariadne Macro.
  *
- *  Ariadne Utility is free software: you can redistribute it and/or modify
+ *  Ariadne Macro is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
- *  Ariadne Utility is distributed in the hope that it will be useful,
+ *  Ariadne Macro is distributed in the hope that it will be useful,
  *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  *  GNU General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License
- *  along with Ariadne Utility.  If not, see <https://www.gnu.org/licenses/>.
+ *  along with Ariadne Macro.  If not, see <https://www.gnu.org/licenses/>.
  */
 
 /*!\file test.hpp
  * \brief Macros for test suite.
  */
 
-#ifndef ARIADNE_TEST_HPP
-#define ARIADNE_TEST_HPP
+#ifndef ARIADNE_MACRO_TEST_HPP
+#define ARIADNE_MACRO_TEST_HPP
 
 #include <cstdlib>
 #include <cstring>
 #include <cmath>
 #include <iostream>
 #include <exception>
-#include "utility/macros.hpp"
+#include "macro/general.hpp"
 
 int ARIADNE_TEST_FAILURES = 0;
 int ARIADNE_TEST_SKIPPED = 0;
@@ -657,5 +657,5 @@ int test_case_counter = 0;
     } \
 
 
-#endif // ARIADNE_TEST_HPP
+#endif // ARIADNE_MACRO_TEST_HPP
 

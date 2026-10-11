@@ -6,10 +6,10 @@ Ariadne Macro is a header-only support module for Ariadne projects.
 
 It owns the two public headers formerly provided directly by Ariadne Utility:
 
-- `utility/macros.hpp`
-- `utility/test.hpp`
+- `macro/general.hpp`
+- `macro/test.hpp`
 
-The `utility/` include path is intentionally preserved so downstream code does not need to change its includes when Utility starts depending on this module.
+Downstream projects include these headers as `macro/general.hpp` and `macro/test.hpp`.
 
 ## Configure and install
 

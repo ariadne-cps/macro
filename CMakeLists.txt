@@ -23,7 +23,7 @@ endif()
 
 ariadne_register_public_headers(
     TARGET macro
-    DIRECTORIES "${PROJECT_SOURCE_DIR}/include/utility"
+    DIRECTORIES "${PROJECT_SOURCE_DIR}/include/macro"
 )
 
 if(CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
