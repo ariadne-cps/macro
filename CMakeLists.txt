@@ -2,15 +2,22 @@ cmake_minimum_required(VERSION 3.15)
 
 project(Macro VERSION 1.0 LANGUAGES CXX)
 
+find_package(Git REQUIRED)
+
 if(NOT EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/ss/configuration/cmake/ProjectOptions.cmake")
-    message(FATAL_ERROR
-        "Git submodules are not initialized. "
-        "Run 'git submodule update --init --recursive' before configuring the project.")
+    execute_process(
+        COMMAND "${GIT_EXECUTABLE}" -C "${CMAKE_CURRENT_SOURCE_DIR}"
+                submodule update --init -- ss/configuration
+        ERROR_VARIABLE _configuration_error
+        RESULT_VARIABLE _configuration_result
+    )
+    if(NOT _configuration_result EQUAL 0)
+        message(FATAL_ERROR
+            "Cannot initialize configuration submodule: ${_configuration_error}")
+    endif()
 endif()
 
 include("${CMAKE_CURRENT_SOURCE_DIR}/ss/configuration/cmake/ProjectOptions.cmake")
-
-require_initialized_submodules()
 
 if(NOT TARGET macro)
     add_library(macro INTERFACE)
